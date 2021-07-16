@@ -7,7 +7,7 @@ import { Button, Box } from "@material-ui/core";
 
 const Actions = () => {
   const selectedType = useRecoilValue(selectedActivityType);
-  const [activities, setActivities] = useRecoilState(boringActivities);
+  const setActivities = useRecoilState(boringActivities)[1];
   const generateRandomActivities = () => {
     const type = selectedType === Types[0] ? "" : selectedType;
     axios
